@@ -12,9 +12,11 @@ https://www.kaggle.com/c/jane-street-market-prediction/data?select=train.csv
 
 for ex, this EDA: https://www.kaggle.com/carlmcbrideellis/jane-street-eda-of-day-0-and-feature-importance
 
+
 3- baseline model
 
 One notebook to check to build a baseline: https://www.kaggle.com/abiolatti/jane-street-market-baseline-logistic-regression
+or https://www.kaggle.com/lucasmorin/running-algos-fe-for-fast-inference
 
 
 ### general intro to financial markets prediction 
