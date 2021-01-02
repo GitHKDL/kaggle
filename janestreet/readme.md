@@ -1,4 +1,4 @@
-# Jane Street competition 
+# Jane Street Kaggle competition 
 
 
 ### the competiton
