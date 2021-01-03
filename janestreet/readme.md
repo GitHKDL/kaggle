@@ -25,12 +25,19 @@ To be called a strategy, the returns should be positive and steady.
 That's why we have the term 3 in the evaluation function.
 This term is basically a return (sum of all profits) divided by something like their variance.
 The Variance (or volatility) is similar to risk; if a strategy provides a 1% return on average (expectation) but does it with a 10% volatility, this is a very risky deal. the ratio 1%/10% is called a Sharpe ratio; it's the return weighted by risk. In that case it is the term 2.
-This term is here to penalize the profit made (term 4) by the risk taken (sharpe ratio) 
+Then a sharpe ratio shouldn't be negative (useless), and cannot realistically be above 6 (otherwise returns would be 6 times their standard deviation which is unlikely), so the term 3 is just cutting off values below 0 or above 6.
 
-the term
+Finally this term is entering the final formula to penalize the profit made (term 4) by the risk taken (sharpe ratio).
+
+And this explains the "utility function"
 
 
-basic questions answered: https://www.kaggle.com/c/jane-street-market-prediction/discussion/198935
+##### link for other basic questions on the competition 
+https://www.kaggle.com/c/jane-street-market-prediction/discussion/198935
+
+##### post on how to do a kaggle competition as a noob :-) 
+https://www.kaggle.com/tanulsingh077/tackling-any-kaggle-competition-the-noob-s-way
+
 
 2- look at the data
 https://www.kaggle.com/c/jane-street-market-prediction/data?select=train.csv
