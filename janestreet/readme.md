@@ -5,6 +5,31 @@
 1- read introduciton, understand rules and criteria
 https://www.kaggle.com/c/jane-street-market-prediction
 
+##### explanation on the evaluation "utility function"
+
+![evaluation](https://github.com/GitHKDL/kaggle/edit/main/janestreet/eval.png)
+
+The final figure is terms 3 x terms 4 
+
+Term 1 is straightforward to understand: we need to find the action(i,j) for the trade j at date i.
+the consequence of choosing action = 1 is to provide the profit resp(i,j) * weight(i,j) to the total profit of date i:pi.
+
+Hence the term 4 in the final function is just the sum over the 500 dates of the daily profit pi. 
+
+If the evaluation function had only this term 4, then we could win the competition by being "lucky" : just find a trade that is massively profitable (or massively risky) and just trade this one. with some luck, we get a good score.
+
+That is not what Jane street wants.
+
+To be called a strategy, the returns should be positive and steady. 
+
+That's why we have the term 3 in the evaluation function.
+This term is basically a return (sum of all profits) divided by something like their variance.
+The Variance (or volatility) is similar to risk; if a strategy provides a 1% return on average (expectation) but does it with a 10% volatility, this is a very risky deal. the ratio 1%/10% is called a Sharpe ratio; it's the return weighted by risk. In that case it is the term 2.
+This term is here to penalize the profit made (term 4) by the risk taken (sharpe ratio) 
+
+the term
+
+
 basic questions answered: https://www.kaggle.com/c/jane-street-market-prediction/discussion/198935
 
 2- look at the data
